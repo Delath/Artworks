@@ -1,9 +1,3 @@
-/**
-* Template Name: PhotoFolio - v1.1.1
-* Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
@@ -169,5 +163,28 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     aos_init();
   });
+
+  /**
+   * Images loader
+   */
+  let gallery = document.querySelector("#gallery .row");
+  let fileNames = ["20201113_004315.jpg","20210907_233422.jpg"];
+
+  fileNames.forEach(
+    function(filename){
+      let url = `https://github.com/Delath/Artworks/blob/main/images/${filename}?raw=true`;
+
+      let htmlString = `
+        <!-- ======= Gallery Item ======= -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="gallery-item h-100">
+            <img src="${url}" class="img-fluid" alt="">
+          </div>
+        </div><!-- Gallery Item -->
+      `
+
+      gallery.innerHTML+=htmlString;
+    }
+  );
 
 });
