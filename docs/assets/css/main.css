@@ -52,7 +52,6 @@ h6 {
 --------------------------------------------------------------*/
 .page-header {
   padding: 120px 0 60px 0;
-  min-height: 30vh;
   position: relative;
 }
 
@@ -596,4 +595,13 @@ h6 {
 
 .footer .credits a {
   color: var(--color-primary);
+}
+/*--------------------------------------------------------------
+# Modal
+--------------------------------------------------------------*/
+.modal-resize {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #fff0;
 }

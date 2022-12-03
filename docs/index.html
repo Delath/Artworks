@@ -20,9 +20,42 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <script>
+    function createModal(url) {
+      let main = document.querySelector("#main")
+      main.style.filter = "blur(10px)"
+      let modal = document.querySelector("#myModal");
+      let image = document.querySelector(".modal-image")
+      image.setAttribute("src", url)
+      modal.style.display = "block"
+    }
+
+    function closeModal(){
+      console.log("CHIUDI")
+      let modal = document.querySelector("#myModal");
+      modal.style.display = "none"
+      let main = document.querySelector("#main")
+      main.style.filter = "blur(0px)"
+    }
+  </script>
+
+
 </head>
 
 <body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
+
+<!-- The Modal -->
+<div id="myModal"  class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content modal-resize" onClick="closeModal()">
+    <img class="modal-image">
+  </div>
+
+</div>
+
+
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid d-flex align-items-center justify-content-center">
@@ -39,7 +72,7 @@
       </nav><!-- .navbar -->
 
       <div class="header-social-links">
-        <a href="https://www.linkedin.com/in/dario-simoni/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/dario-simoni/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -51,7 +84,7 @@
   <main id="main" data-aos="fade" data-aos-delay="1500" class="aos-init aos-animate">
 
   <!-- ======= Title Header ======= -->
-    <div class="page-header d-flex align-items-center">
+    <div class="page-header d-flex align-items-center" style="padding: 120px 0 0px 0;">
       <div class="container position-relative">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-6 text-center">
