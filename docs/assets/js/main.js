@@ -176,12 +176,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       setTimeout(function(){
         let url = `https://raw.githubusercontent.com/Delath/Artworks/main/docs/assets/compressed-artworks/${filename}.webp`;
+        let urlForModal = `https://raw.githubusercontent.com/Delath/Artworks/main/images/${filename}`;
 
         let htmlString = `
           <!-- ======= Gallery Item ======= -->
           <div class="col-xl-3 col-lg-4 col-md-6" style="width: auto; padding: 20px; max-width: 449.75; margin-left: auto; margin-right: auto;">
             <div class="gallery-item h-100">
-              <img src="${url}" class="img-fluid" onClick="createModal(&quot;${url}&quot;)">
+              <img src="${url}" class="img-fluid" onClick="createModal(&quot;${urlForModal}.jpeg&quot;)">
             </div>
           </div><!-- Gallery Item -->
         `
@@ -207,6 +208,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     return array;
-  }  
+  }
+
+
   
 });

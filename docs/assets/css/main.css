@@ -51,7 +51,7 @@ h6 {
 # Page Header
 --------------------------------------------------------------*/
 .page-header {
-  padding: 120px 0 60px 0;
+  padding: 120px 0 0px 0;
   position: relative;
 }
 
@@ -604,4 +604,25 @@ h6 {
   justify-content: center;
   height: 100%;
   background-color: #fff0;
+}
+
+@media (max-width: 1279px) {
+  .navbar {
+    max-width: 200px;
+  }
+
+  .header-social-links {
+    padding-right: initial;
+    right: initial;
+    left: 25px;
+  }
+
+  .hamburger {
+    right: 25px;
+    position: absolute;
+  }
+
+  .page-header {
+    padding: 60px 0 0px 0;
+  }
 }

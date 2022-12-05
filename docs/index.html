@@ -23,8 +23,8 @@
 
   <script>
     function createModal(url) {
-      let main = document.querySelector("#main")
-      main.style.filter = "blur(10px)"
+      let page = document.getElementById("page-wrapper-to-blur")
+      page.style.filter = "blur(7px)"
       let modal = document.querySelector("#myModal");
       let image = document.querySelector(".modal-image")
       image.setAttribute("src", url)
@@ -32,11 +32,22 @@
     }
 
     function closeModal(){
-      console.log("CHIUDI")
+      let page = document.getElementById("page-wrapper-to-blur")
+      page.style.filter = "blur(0px)"
       let modal = document.querySelector("#myModal");
       modal.style.display = "none"
-      let main = document.querySelector("#main")
-      main.style.filter = "blur(0px)"
+      header.style.filter = "blur(0px)"
+    }
+
+    function changeFormat(source){
+      console.log(source.src.charAt(source.src.length-2))
+      if(source.src.charAt(source.src.length-2)=="e"){
+        source.src=source.src.slice(0, -4)
+        source.src=source.src+"png"
+      }else{
+        source.src=source.src.slice(0, -3)
+        source.src=source.src+"jpg"
+      }
     }
   </script>
 
@@ -50,62 +61,65 @@
 
   <!-- Modal content -->
   <div class="modal-content modal-resize" onClick="closeModal()">
-    <img class="modal-image">
+    <img class="modal-image" style="-webkit-user-drag: none; -webkit-user-select: none; max-width: 95%; max-height: 95%;" onerror="changeFormat(this)" >
   </div>
 
 </div>
 
+  <div id="page-wrapper-to-blur">
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid d-flex align-items-center justify-content-center">
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid d-flex align-items-center justify-content-center">
 
-      <!-- ======= .navbar ======= -->
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="https://github.com/Delath" target="_blank" class="active"><span>Delath</span></a></li>
-          <li><a href="https://github.com/Demisu" target="_blank" class="active">Demisu</a></li>
-          <li><a href="https://github.com/billydotexe" target="_blank" class="active">Billy</a></li>
-          <li><a href="https://youtu.be/xvFZjo5PgG0" target="_blank" class="active"><span>Rick</span></a></li>
-          <li><a href="https://github.com/Delath/Artworks">Repository</a></li>
-        </ul>
-      </nav><!-- .navbar -->
+        <!-- ======= .navbar ======= -->
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="https://github.com/Delath" target="_blank" class="active"><span>Delath</span></a></li>
+            <li><a href="https://github.com/Demisu" target="_blank" class="active">Demisu</a></li>
+            <li><a href="https://github.com/billydotexe" target="_blank" class="active">Billy</a></li>
+            <li><a href="https://youtu.be/xvFZjo5PgG0" target="_blank" class="active"><span>Rick</span></a></li>
+            <li><a href="https://github.com/Delath/Artworks">Repository</a></li>
+          </ul>
+        </nav><!-- .navbar -->
 
-      <div class="header-social-links">
-        <a href="https://www.linkedin.com/in/dario-simoni/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <div class="header-social-links">
+          <a href="https://www.linkedin.com/in/dario-simoni/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list hamburger"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
       </div>
+    </header><!-- End Header -->
 
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    <main id="main" data-aos="fade" data-aos-delay="1500" class="aos-init aos-animate">
 
-    </div>
-  </header><!-- End Header -->
-
-  <main id="main" data-aos="fade" data-aos-delay="1500" class="aos-init aos-animate">
-
-  <!-- ======= Title Header ======= -->
-    <div class="page-header d-flex align-items-center" style="padding: 120px 0 0px 0;">
-      <div class="container position-relative">
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-6 text-center">
-            <h2>Artworks</h2>
+    <!-- ======= Title Header ======= -->
+      <div class="page-header d-flex align-items-center">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h2>Artworks</h2>
+            </div>
           </div>
         </div>
-      </div>
-    </div><!-- Title Header -->
+      </div><!-- Title Header -->
 
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
-      <div class="container-fluid">
-        <ul class="cont" style="column-width: 449.75px; margin: 0; padding: 0;" >
-          
-          <!-- ======= Images loaded from js ======= -->
+      <!-- ======= Gallery Section ======= -->
+      <section id="gallery" class="gallery">
+        <div class="container-fluid">
+          <ul class="cont" style="column-width: 449.75px; margin: 0; padding: 0;" >
+            
+            <!-- ======= Images loaded from js ======= -->
 
-        </ul>
-      </div>
-    </section><!-- Gallery Section -->
+          </ul>
+        </div>
+      </section><!-- Gallery Section -->
 
-  </main><!-- End #main -->
+    </main><!-- End #main -->
+
+  </div>  <!-- ======= wrapper to blur ======= -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
