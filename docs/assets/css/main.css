@@ -626,3 +626,11 @@ h6 {
     padding: 60px 0 0px 0;
   }
 }
+/*--------------------------------------------------------------
+# Columns
+--------------------------------------------------------------*/
+.columns-holder {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
