@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- ======= Gallery Item ======= -->
           <div class="artwork-padding">
             <div class="artwork-image">
-              <img class="artwork lazy image-${index}" onclick="openModal(&quot;${fullImageUrl}&quot;)">
+              <img class="artwork lazy image-${index}" onclick="openModal(&quot;${fullImageUrl}&quot;) alt="Anime artwork">
             </div>
           </div>
           `;
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- ======= Gallery Item ======= -->
           <div class="artwork-padding">
             <div class="artwork-image">
-              <img class="artwork" onclick="openModal(&quot;${fullImageUrl}&quot;)" src="${url}">
+              <img class="artwork" onclick="openModal(&quot;${fullImageUrl}&quot;)" src="${url}" alt="Anime artwork">
             </div>
           </div>
           `;
