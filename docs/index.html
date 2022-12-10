@@ -1,139 +1,167 @@
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!DOCTYPE html>
+<html lang="en">
 
-  <title>Delath's artwork gallery</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&amp;family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Cardo:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+        <meta name="description" content="Gallery of artworks saved over the years" />
+        <meta name="author" content="Delath">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <title>Delath's artwork gallery</title>
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+        <link href="assets/css/main.css" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/cardo" rel="stylesheet">
+    </head>
 
-  <script>
-    function createModal(url) {
-      let page = document.getElementById("page-wrapper-to-blur")
-      page.style.filter = "blur(7px)"
-      let modal = document.querySelector("#myModal");
-      let image = document.querySelector(".modal-image")
-      image.setAttribute("src", url)
-      modal.style.display = "block"
-    }
+    <body>
+  
+        <div id="container" class="container">
 
-    function closeModal(){
-      let page = document.getElementById("page-wrapper-to-blur")
-      page.style.filter = "blur(0px)"
-      let modal = document.querySelector("#myModal");
-      modal.style.display = "none"
-      header.style.filter = "blur(0px)"
-    }
+            <header>
+                <div class="header">
+  
+                    <nav class="navbar">
+                        <a class="contributors" href="https://github.com/Delath" target="_blank">
+                            Delath
+                        </a>
+                        <a class="contributors" href="https://github.com/Demisu" target="_blank">
+                            Demisu
+                        </a>
+                        <a class="contributors" href="https://github.com/billydotexe" target="_blank">
+                            Billy
+                        </a>
+                        <a class="contributors" href="https://youtu.be/xvFZjo5PgG0" target="_blank">
+                            Rick
+                        </a>
+                        <a class="references" href="https://github.com/Delath/Artworks">
+                            Repository
+                        </a>
+                        <div class="x" onclick="closeSideBar()">
+                            <svg class="x-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+                                <path class="x-svg-path" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </nav>
 
-    function changeFormat(source){
-      console.log(source.src.charAt(source.src.length-2))
-      if(source.src.charAt(source.src.length-2)=="e"){
-        source.src=source.src.slice(0, -4)
-        source.src=source.src+"png"
-      }else{
-        source.src=source.src.slice(0, -3)
-        source.src=source.src+"jpg"
-      }
-    }
-  </script>
+                    <div id="obscure" class="obscure"></div>
+        
+                    <a class="linkedin" href="https://www.linkedin.com/in/dario-simoni/" target="_blank">
+                        <svg class="linkedin-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1000" height="1000" viewBox="0 0 1000 1000" xml:space="preserve">
+                            <rect x="0" y="0" width="100%" height="100%" fill="rgb(0, 0, 0)"/>
+                            <g transform="matrix(56.8182 0 0 56.8182 500 500)" id="510599">
+                                <path class="linkedin-svg-path" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" transform=" translate(-8, -8)" d="M 0 1.146 C 0 0.513 0.526 0 1.175 0 h 13.65 C 15.474 0 16 0.513 16 1.146 v 13.708 c 0 0.633 -0.526 1.146 -1.175 1.146 H 1.175 C 0.526 16 0 15.487 0 14.854 V 1.146 z m 4.943 12.248 V 6.169 H 2.542 v 7.225 h 2.401 z m -1.2 -8.212 c 0.837 0 1.358 -0.554 1.358 -1.248 c -0.015 -0.709 -0.52 -1.248 -1.342 -1.248 c -0.822 0 -1.359 0.54 -1.359 1.248 c 0 0.694 0.521 1.248 1.327 1.248 h 0.016 z m 4.908 8.212 V 9.359 c 0 -0.216 0.016 -0.432 0.08 -0.586 c 0.173 -0.431 0.568 -0.878 1.232 -0.878 c 0.869 0 1.216 0.662 1.216 1.634 v 3.865 h 2.401 V 9.25 c 0 -2.22 -1.184 -3.252 -2.764 -3.252 c -1.274 0 -1.845 0.7 -2.165 1.193 v 0.025 h -0.016 a 5.54 5.54 0 0 1 0.016 -0.025 V 6.169 h -2.4 c 0.03 0.678 0 7.225 0 7.225 h 2.4 z" stroke-linecap="round"/>
+                            </g>
+                        </svg>    
+                    </a>
 
+                    <div class="hamburger" onclick="openSideBar()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="hamburger-svg" viewBox="0 0 16 16">
+                            <path class="hamburger-svg-path" fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </div>
 
-</head>
+                </div>
 
-<body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
+            </header>
+  
+            <main>
+                <div id="main" class="main">
+  
+                    <h2 class="title">Artworks</h2>
+  
+                    <div class="gallery">
+  
+                        <div class="column-0">Placeholder</div>
+                    
+                    </div>
+  
+                </div>
+            </main>
+  
+            <a href="#" class="scroll-top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(0, 0, 0);" class="scroll-top-svg" viewBox="0 0 16 16">
+                    <path class="scroll-top-svg-path" fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+                </svg>
+            </a>
+  
+            <footer>
+                <div class="footer">
+                    <small>
+                        Credits will be added to each image.
+                    </small>
+                </div>
+            </footer>
 
-<!-- The Modal -->
-<div id="myModal"  class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content modal-resize" onClick="closeModal()">
-    <img class="modal-image" style="-webkit-user-drag: none; -webkit-user-select: none; max-width: 95%; max-height: 95%;" onerror="changeFormat(this)" >
-  </div>
-
-</div>
-
-  <div id="page-wrapper-to-blur">
-
-    <!-- ======= Header ======= -->
-    <header id="header" class="header d-flex align-items-center fixed-top">
-      <div class="container-fluid d-flex align-items-center justify-content-center">
-
-        <!-- ======= .navbar ======= -->
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li><a href="https://github.com/Delath" target="_blank" class="active"><span>Delath</span></a></li>
-            <li><a href="https://github.com/Demisu" target="_blank" class="active">Demisu</a></li>
-            <li><a href="https://github.com/billydotexe" target="_blank" class="active">Billy</a></li>
-            <li><a href="https://youtu.be/xvFZjo5PgG0" target="_blank" class="active"><span>Rick</span></a></li>
-            <li><a href="https://github.com/Delath/Artworks">Repository</a></li>
-          </ul>
-        </nav><!-- .navbar -->
-
-        <div class="header-social-links">
-          <a href="https://www.linkedin.com/in/dario-simoni/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
         </div>
 
-        <i class="mobile-nav-toggle mobile-nav-show bi bi-list hamburger"></i>
-        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
-      </div>
-    </header><!-- End Header -->
-
-    <main id="main" data-aos="fade" data-aos-delay="1500" class="aos-init aos-animate">
-
-    <!-- ======= Title Header ======= -->
-      <div class="page-header d-flex align-items-center">
-        <div class="container position-relative">
-          <div class="row d-flex justify-content-center">
-            <div class="col-lg-6 text-center">
-              <h2>Artworks</h2>
+        <div id="modal" class="modal-wrapper" style="display: none">
+            <div class="modal" onclick="closeModal()">
+                <img class="modal-image">
             </div>
-          </div>
         </div>
-      </div><!-- Title Header -->
 
-      <!-- ======= Gallery Section ======= -->
-      <section id="gallery" class="gallery">
-        <div class="columns-holder">
+        <script>
+            function openModal(url){
+                let modalImage = document.querySelector("#modal .modal-image");
+                modalImage.src = url
 
-          <!-- ======= Columns loaded from js ======= -->
+                let header = document.querySelector("#container .header")
+                header.style.paddingRight = "10px"
 
-        </div>
-      </section><!-- Gallery Section -->
+                let scrollTop = document.querySelector("#container .scroll-top")
+                scrollTop.style.transition = "all 0s"
+                scrollTop.style.right = "25px"
 
-    </main><!-- End #main -->
+                let modal = document.querySelector("#modal");
+                modal.style.display = "block"
 
-  </div>  <!-- ======= wrapper to blur ======= -->
+                let body = document.querySelector('body')
+                body.style.overflow = "hidden"
+                body.style.paddingRight = "10px"
+            
+                let linkedin = document.querySelector("#container .linkedin")
+                linkedin.style.paddingRight = "10px"
+            }
+            function closeModal(){
+                let header = document.querySelector("#container .header")
+                header.style.paddingRight = "0px"
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="container">
-    </div>
-  </footer><!-- End Footer -->
+                let scrollTop = document.querySelector("#container .scroll-top")
+                scrollTop.style.right = "15px"
+                setTimeout(function(){scrollTop.style.removeProperty("transition")}, 400)
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+                let modal = document.querySelector("#modal");
+                modal.style.display = "none"
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+                let body = document.querySelector('body')
+                body.style.overflow = "visible"
+                body.style.paddingRight = "0px"
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+                let linkedin = document.querySelector("#container .linkedin")
+                linkedin.style.paddingRight = "0px"
+            }
+            function openSideBar(){
+                console.log("opened")
+                let navbar = document.querySelector("#container .navbar")
+                navbar.style.right = "0px"
 
-</body></html>
+                let obscurer = document.getElementById("obscure")
+                obscurer.style.width = "100vh"
+                obscurer.style.height = "100vh"
+            }
+            function closeSideBar(){
+                console.log("closed")
+                let navbar = document.querySelector("#container .navbar")
+                navbar.style.right = "-900px"
+
+                let obscurer = document.getElementById("obscure")
+                obscurer.style.width = "0px"
+                obscurer.style.height = "0px"
+            }
+        </script>
+        <script src="assets/js/main.js"></script>
+    </body>
+
+</html>
