@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- ======= Gallery Item ======= -->
           <div class="artwork-padding">
             <div class="artwork-image">
-              <img class="artwork lazy image-${index}" onclick="openModal(&quot;${fullImageUrl}&quot;) alt="Anime artwork">
+              <img class="artwork lazy image-${index}" onclick="openModal(&quot;${fullImageUrl}&quot;)" alt="Anime artwork">
             </div>
           </div>
           `;
