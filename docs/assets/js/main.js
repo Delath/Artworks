@@ -163,6 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
       pageObscurer.style.width = "0px"
       pageObscurer.style.height = "0px"  
     }, 150)
-  }, 50)
+  }, 100)
 
 });
