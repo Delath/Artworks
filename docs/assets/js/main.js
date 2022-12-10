@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     return minId
   }
-  
+
   // this function might get cleaned in the future
   function lazyload () {
     var lazyloadImages = document.querySelectorAll("img.lazy");
@@ -154,5 +154,15 @@ document.addEventListener('DOMContentLoaded', () => {
       behavior: 'smooth'
     }));
   }
+
+  setTimeout(function(){
+    let pageObscurer = document.getElementById("obscure-loading")
+    pageObscurer.style.backgroundColor = "rgba(0, 0, 0, 0)"  
+
+    setTimeout(function(){
+      pageObscurer.style.width = "0px"
+      pageObscurer.style.height = "0px"  
+    }, 150)
+  }, 50)
 
 });
