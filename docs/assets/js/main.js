@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(function(){
       pageObscurer.style.width = "0px"
       pageObscurer.style.height = "0px"  
-    }, 1100)
+    }, 1200)
   }, 100)
 
 });
