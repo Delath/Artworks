@@ -10,9 +10,10 @@
 
         <title>Delath's artwork gallery</title>
 
-        <link href="assets/css/main.css" rel="stylesheet">
+        <link href="assets/css/styles.css" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/cardo" rel="stylesheet">
+        <link rel="manifest" href="assets/manifest.webmanifest">
     </head>
 
     <body>
@@ -105,6 +106,12 @@
         </div>
 
         <script>
+            if (navigator.serviceWorker) {
+                navigator.serviceWorker.register (
+                '/github-page-pwa/sw.js',
+                {scope: '/github-page-pwa/'}
+                )
+            }
             function openModal(url){
                 let modalImage = document.querySelector("#modal .modal-image");
                 modalImage.src = url
@@ -163,7 +170,7 @@
                 obscurer.style.height = "0px"
             }
         </script>
-        <script src="assets/js/main.js"></script>
+        <script src="assets/js/app.js"></script>
     </body>
 
 </html>

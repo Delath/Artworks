@@ -1,0 +1,21 @@
+{
+    "name": "Delath's Artworks Collection",
+    "short_name": "Artworks",
+    "description": "Collection of Anime Artworks gathered in years all over the web",
+  
+    "scope": "https://delath.github.io/Artworks/",
+    "start_url": "https://delath.github.io/Artworks/",
+  
+    "background_color": "#000000",
+    "theme_color": "#000000",
+  
+    "display": "fullscreen", 
+    
+    "icons": [
+        {
+          "src": "/images/icon.png",
+          "type": "image/png",
+          "sizes": "700x700"
+        }
+    ]
+}
