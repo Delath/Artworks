@@ -108,10 +108,7 @@
 
         <script>
             if (navigator.serviceWorker) {
-                navigator.serviceWorker.register (
-                '/github-page-pwa/sw.js',
-                {scope: '/github-page-pwa/'}
-                )
+                navigator.serviceWorker.register ('/assets/sw.js')
             }
             function openModal(url){
                 let modalImage = document.querySelector("#modal .modal-image");
