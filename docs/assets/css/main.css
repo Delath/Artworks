@@ -319,6 +319,8 @@ font-weight: 400;*/
     max-width: 100%;
     transition: 0.3s;
     display: block;
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
 .artwork:hover {
