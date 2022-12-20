@@ -13,7 +13,7 @@
     
     "icons": [
         {
-          "src": "/images/icon.png",
+          "src": "https://github.com/Delath/Artworks/blob/main/docs/assets/images/icon.png?raw=true",
           "type": "image/png",
           "sizes": "700x700"
         }
