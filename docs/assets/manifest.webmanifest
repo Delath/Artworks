@@ -3,7 +3,7 @@
     "short_name": "Artworks",
     "description": "Collection of Anime Artworks gathered in years all over the web",
   
-    "scope": "/Artworks/",
+    "id": "/Artworks/",
     "start_url": "/Artworks/",
   
     "background_color": "#000000",
