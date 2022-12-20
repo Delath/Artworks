@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lazyloadThrottleTimeout = setTimeout(function() {
       var scrollTop = window.pageYOffset;
       lazyloadImages.forEach(function(img) {
-        if(img.offsetTop < (window.innerHeight + scrollTop)) {
+        if((img.offsetTop - window.innerHeight) < (window.innerHeight + scrollTop)) {
           let id = img.className.slice(-3)
           if(id[0]=="-"){
             id = img.className.slice(-2)
@@ -163,6 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
       pageObscurer.style.width = "0px"
       pageObscurer.style.height = "0px"  
     }, 1200)
-  }, 100)
+  }, 404)
 
 });
