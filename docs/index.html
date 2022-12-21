@@ -108,13 +108,9 @@
         </div>
 
         <script>
-            if (navigator.serviceWorker) {
-                navigator.serviceWorker.register (
-                    '/Artworks/sw.js',
-                    {scope: '/Artworks/'}
-                )
-                console.log(navigator)
-            }
+            if ('serviceWorker' in navigator) {
+		    	navigator.serviceWorker.register('service-worker.js');
+		    }
             function openModal(url){
                 let modalImage = document.querySelector("#modal .modal-image");
                 modalImage.src = url
