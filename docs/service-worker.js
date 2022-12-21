@@ -4,8 +4,8 @@ const RUNTIME = 'runtime-1';
 const PRECACHE_URLS = [
   'index.html',
   './',
-  `/assets/css/styles.css`,
-  `/assets/js/app.js`
+  `assets/css/styles.css`,
+  `assets/js/app.js`
 ];
 //   `/Artworks/assets/`,
 
