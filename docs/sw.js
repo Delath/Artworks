@@ -8,7 +8,7 @@ var APP_PREFIX = 'Artworks';
 // you need to change this version (version_01, version_02…). 
 // If you don't change the version, the service worker will give your
 // users the old files!
-var VERSION = 'version_06';
+var VERSION = 'version_07';
 
 var CACHE_NAME = APP_PREFIX + VERSION
 
