@@ -4,6 +4,7 @@
     "description": "Collection of Anime Artworks gathered in years all over the web",
   
     "id": "/Artworks/",
+    "scope": "/Artworks/",
     "start_url": "/Artworks/",
   
     "background_color": "#000000",
@@ -13,9 +14,10 @@
     
     "icons": [
         {
-          "src": "https://github.com/Delath/Artworks/blob/main/docs/assets/images/icon.png?raw=true",
+          "src": "images/icon.png",
           "type": "image/png",
-          "sizes": "700x700"
+          "sizes": "700x700",
+          "purpose": "any maskable"
         }
     ]
 }
