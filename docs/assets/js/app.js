@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let shorterColumn = findShorterColumn(columnsNum, columnsSize);
         columnsSize[shorterColumn]+=parseInt(file.height);
         let column = document.querySelector(`#main .column-${shorterColumn}`);
-        let url = `images/${file.name}.webp`;
-        let fullImageUrl = `https://raw.githubusercontent.com/Delath/Artworks/main/images/${file.name}${file.format}`
+        let url = `images/webp/${file.name}.webp`;
+        let fullImageUrl = `images/high-quality/${file.name}${file.format}`
         // (myHeight*2) may get changed to something else in the future
         if(columnsSize[shorterColumn]>(myHeight*2)){
           column.innerHTML+=`
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id = img.className.slice(-1)
           }
           if(id!="ork" && id!="rk"){
-            let src = `images/${files[id].name}.webp`;
+            let src = `images/webp/${files[id].name}.webp`;
             img.src = src;
             img.classList.remove('lazy');
             img.classList.remove(`image-${id}`);

@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-const dir_to_scan string = "../images"
+const dir_to_scan string = "../docs/images/high-quality"
 
 // this outputs an array needed in the javascript of the website
 func main() {
