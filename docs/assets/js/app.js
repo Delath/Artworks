@@ -158,8 +158,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(function(){
     let pageObscurer = document.getElementById("obscure-loading")
     pageObscurer.style.backgroundColor = "rgba(0, 0, 0, 0)"  
-
     setTimeout(function(){
+      pageObscurer.style.transition = "0s"
       pageObscurer.style.width = "0px"
       pageObscurer.style.height = "0px"  
     }, 1000)
