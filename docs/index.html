@@ -129,17 +129,18 @@
                     myWidth = document.body.clientWidth;
                 }
 
+                let wholeHtml = document.querySelector('html')
+                wholeHtml.style.overflow = "hidden"
+
                 if(!(myWidth<=1280)){
+                    wholeHtml.style.paddingRight = "10px"
+
                     let header = document.querySelector("#container .header")
                     header.style.paddingRight = "10px"
 
                     let scrollTop = document.querySelector("#container .scroll-top")
                     scrollTop.style.transition = "all 0s"
                     scrollTop.style.right = "25px"
-
-                    let wholeHtml = document.querySelector('html')
-                    wholeHtml.style.overflow = "hidden"
-                    wholeHtml.style.paddingRight = "10px"
 
                     let linkedin = document.querySelector("#container .linkedin")
                     linkedin.style.paddingRight = "10px"
