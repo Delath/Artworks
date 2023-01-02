@@ -3,10 +3,10 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <meta name="description" content="Gallery of artworks saved over the years" />
         <meta name="author" content="Delath">
-        <meta name="theme-color" content="#000000"/>
+        <meta name="theme-color" content="#000000"/>  
 
         <title>Delath's artwork gallery</title>
 
@@ -114,22 +114,36 @@
                 let modalImage = document.querySelector("#modal .modal-image");
                 modalImage.src = url
 
-                let header = document.querySelector("#container .header")
-                header.style.paddingRight = "10px"
-
-                let scrollTop = document.querySelector("#container .scroll-top")
-                scrollTop.style.transition = "all 0s"
-                scrollTop.style.right = "25px"
-
                 let modal = document.querySelector("#modal");
                 modal.style.display = "block"
 
-                let wholeHtml = document.querySelector('html')
-                wholeHtml.style.overflow = "hidden"
-                wholeHtml.style.paddingRight = "10px"
-            
-                let linkedin = document.querySelector("#container .linkedin")
-                linkedin.style.paddingRight = "10px"
+                let myWidth
+                if( typeof( window.innerWidth ) == 'number' ) {
+                //Non-IE
+                    myWidth = window.innerWidth;
+                } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                //IE 6+ in 'standards compliant mode'
+                    myWidth = document.documentElement.clientWidth;
+                } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                //IE 4 compatible
+                    myWidth = document.body.clientWidth;
+                }
+
+                if(!(myWidth<=1280)){
+                    let header = document.querySelector("#container .header")
+                    header.style.paddingRight = "10px"
+
+                    let scrollTop = document.querySelector("#container .scroll-top")
+                    scrollTop.style.transition = "all 0s"
+                    scrollTop.style.right = "25px"
+
+                    let wholeHtml = document.querySelector('html')
+                    wholeHtml.style.overflow = "hidden"
+                    wholeHtml.style.paddingRight = "10px"
+
+                    let linkedin = document.querySelector("#container .linkedin")
+                    linkedin.style.paddingRight = "10px"
+                }
             }
             function closeModal(){
                 let header = document.querySelector("#container .header")
