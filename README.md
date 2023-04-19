@@ -1,1 +1,1 @@
-# [delath.github.io](https://delath.github.io/Artworks/)
+# [artworks.delath.xyz](https://artworks.delath.xyz/)
