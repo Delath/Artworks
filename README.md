@@ -1,4 +1,5 @@
 # Artworks
+![latest commit](https://img.shields.io/github/last-commit/Delath/Oracle-Assistant?color=yellow)
 
 Artworks is an image gallery website, showcasing a stream of images in an adaptive multi-column layout. The website is hosted on GitHub Pages with a personalized URL.
 
