@@ -7,7 +7,6 @@ const PRECACHE_URLS = [
   `assets/css/styles.css`,
   `assets/js/app.js`
 ];
-//   `/Artworks/assets/`,
 
 self.addEventListener('install', event => {
   event.waitUntil(
